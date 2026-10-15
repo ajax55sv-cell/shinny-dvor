@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Шинный двор · шиномонтаж к своему времени</title>
+<meta name="description" content="Шиномонтаж на ул. Пролетарская, 14, Казань: запись заранее, переобувка за 30 минут, балансировка в стоимости, легковые и кроссоверы до R22, сезонное хранение.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Шинный двор">
+<meta property="og:title" content="Шиномонтаж в Казани по записи – переобуем за 30 минут">
+<meta property="og:description" content="Шиномонтаж на ул. Пролетарская, 14, Казань: записываетесь заранее, цену знаете до приезда, балансировка уже в стоимости.">
+<meta property="og:url" content="https://ajax55sv-cell.github.io/shinny-dvor/">
+<meta property="og:image" content="https://ajax55sv-cell.github.io/shinny-dvor/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0d11">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Шинный двор",
+  "legalName": "ООО «Шинный двор»",
+  "url": "https://ajax55sv-cell.github.io/shinny-dvor/",
+  "image": "https://ajax55sv-cell.github.io/shinny-dvor/assets/og.jpg",
+  "telephone": "+7-843-205-48-17",
+  "email": "info@shinnydvor-kzn.ru",
+  "priceRange": "от 900 ₽",
+  "address": { "@type": "PostalAddress", "streetAddress": "ул. Пролетарская, 14", "addressLocality": "Казань", "postalCode": "420107", "addressCountry": "RU" },
+  "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "22:00" }
+}
+</script>
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/unbounded-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-cyrillic.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27none%27 stroke=%27%23f2a93b%27 stroke-width=%276%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- тема: шесть цветов, два шрифта --------------------------------- */
+  .v-page {
+    --v-canvas: #0b0d11; --v-surface: #141821;
+    --v-ink: #f1ede4; --v-ink-soft: #9d9a92;
+    --v-accent: #f2a93b; --v-accent-ink: #16110a;
+    --v-font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 4 6 12;
+  }
+
+  /* ---- шапка: при скролле подложка, чтобы текст не просвечивал ----------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
+    padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
+    background: linear-gradient(to bottom, rgb(11 13 17 / .85), rgb(11 13 17 / 0));
+    transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(11 13 17 / .78); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-sm); letter-spacing: .02em; text-decoration: none;
+    display: inline-flex; align-items: center; gap: .55em; min-height: 44px; white-space: nowrap; }
+  .bar__mark i { width: .9em; height: .9em; border-radius: 50%; border: .22em solid var(--v-accent); display: inline-block; }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; font-size: .8rem; }
+    .bar__right { gap: var(--v-2); }
+    .bar__mark { font-size: .85rem; }
+  }
+  @media (max-width: 860px) { .bar.is-scrolled { background: rgb(11 13 17 / .96); } }
+
+  /* ---- hero: три плана ---------------------------------------------------- */
+  /* img внутри <picture>: селектор движка .v-layer > img не достаёт, позиционируем сами */
+  .hero__back img, .hero__wheel img { position: absolute; max-width: none; }
+  .hero__back img { width: 118%; height: 118%; left: -9%; top: -9%; object-fit: cover; }
+  .hero__wheel { --w: clamp(200px, 22vw, 360px); --r: clamp(2rem, 8vw, 10rem); --b: -7vh; }
+  .hero__wheel img { width: var(--w); right: var(--r); bottom: var(--b);
+    filter: drop-shadow(0 24px 30px rgb(0 0 0 / .55)); }
+  /* тень-контакт на мокром асфальте: эллипс под колесом */
+  .hero__wheel::after { content: ""; position: absolute; width: calc(var(--w) * 1.25); height: calc(var(--w) * .16);
+    right: calc(var(--r) - var(--w) * .12); bottom: calc(var(--b) + var(--w) * .02);
+    border-radius: 50%; background: radial-gradient(ellipse at center, rgb(0 0 0 / .6), rgb(0 0 0 / .25) 50%, transparent 72%);
+    filter: blur(14px); }
+  /* оффер: размер зависит и от ширины, и от высоты экрана, чтобы не заезжать под шапку с логотипом */
+  .hero__copy .v-display { font-size: clamp(1.7rem, min(1.1rem + 2.5vw, 7.4vh), 3.4rem); line-height: 1.02; }
+  .hero__copy .v-lede { font-size: clamp(.95rem, min(.8rem + .5vw, 2.6vh + .2rem), 1.25rem); }
+  .hero__floor { position: absolute; inset: auto 0 0 0; height: 34%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, var(--v-canvas) 0%, rgb(11 13 17 / .6) 45%, transparent 100%); }
+  .hero__copy { bottom: clamp(4rem, 14vh, 10rem); max-width: min(42rem, 88vw); }
+  .hero__copy .v-lede { margin-top: var(--v-5); color: var(--v-ink); opacity: .9; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: var(--v-3); margin-top: var(--v-6); }
+  .hero__where { margin-top: var(--v-4); font-size: var(--v-t-sm); font-weight: 600; letter-spacing: .01em; color: var(--v-ink); opacity: .85; }
+  .hero__note { position: absolute; z-index: 3; right: var(--v-gutter); top: clamp(5rem, 14vh, 9rem); text-align: right; display: grid; gap: .3em; }
+  .hero__note .v-nums { font-weight: 600; }
+  .hero__note .hero__addr { color: var(--v-ink); font-size: var(--v-t-sm); }
+  @media (max-width: 860px) {
+    .hero__wheel { --w: 38vw; --r: 6vw; --b: 50vh; }
+    .hero__wheel img { filter: drop-shadow(0 18px 24px rgb(0 0 0 / .6)); }
+    .hero__wheel::after { display: none; }
+    .hero__note { display: none; }
+    .hero__copy { bottom: clamp(3rem, 8vh, 5rem); }
+    .hero__copy .v-display { font-size: clamp(1.7rem, min(1.2rem + 3.2vw, 7.2vh), 3rem); }
+  }
+  @media (max-width: 600px) { .hero__wheel { --w: 44vw; --r: 5vw; --b: 56vh; } }
+  @media (max-width: 600px) and (max-height: 700px) { .hero__wheel { --w: 36vw; --b: 58vh; } }
+
+  /* ---- фирменный ход: сезонная шкала ------------------------------------- */
+  .season { display: grid; grid-template-rows: 1fr auto auto; grid-template-columns: 1.3fr 1fr; column-gap: var(--v-8); height: 100%;
+    padding: clamp(4rem, 12vh, 7rem) var(--v-gutter) clamp(3rem, 12vh, 8rem); }
+  .season__copy { align-self: center; display: grid; max-width: 40rem; }
+  .season__copy > div { grid-area: 1 / 1; }
+  .season__copy .v-display { margin-bottom: var(--v-4); }
+  .season__copy .v-body { color: var(--v-ink-soft); max-width: 36rem; }
+  .season__copy .v-body b { color: var(--v-ink); font-weight: 600; }
+  .season__thr { align-self: center; justify-self: end; text-align: right; }
+  .season__thr .big { font-family: var(--v-font-display); font-weight: 700; font-size: clamp(5rem, 12vw, 11rem); line-height: .9; letter-spacing: -.04em;
+    color: transparent; -webkit-text-stroke: 2px rgb(242 169 59 / .55); display: block; }
+  .season__thr .v-label { display: block; margin-top: var(--v-3); }
+  .season .scale { grid-column: 1 / -1; }
+  .season__after { grid-column: 1 / -1; padding-top: var(--v-5); display: flex; justify-content: flex-end; }
+  .scale { position: relative; height: 6.6rem; --edge: 5.556%; }
+  .scale__line { position: absolute; left: var(--edge); right: var(--edge); top: 2.25rem; height: 1px; background: var(--v-hair-strong); }
+  .scale__fill { position: absolute; left: var(--edge); top: 2.25rem; height: 1px; background: var(--v-accent); width: calc(var(--v-p, 0) * (100% - 2 * var(--edge))); }
+  .scale__months { display: grid; grid-template-columns: repeat(9, 1fr); position: absolute; inset: 0; }
+  .scale__months li { position: relative; padding-top: 4.1rem; text-align: center; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); transition: color .3s; }
+  .scale__months li::before { content: ""; position: absolute; left: 50%; top: 1.75rem; width: 1px; height: 1rem; background: var(--v-hair-strong); }
+  .scale__months li::after { content: attr(data-m); }
+  .scale__months li.is-past { color: var(--v-ink); }
+  .scale__months li.is-past::before { background: var(--v-accent); }
+  .scale__mark { position: absolute; top: 2.25rem; left: calc(var(--edge) + var(--v-p, 0) * (100% - 2 * var(--edge))); width: 2.6rem; height: 2.6rem; margin: -1.3rem 0 0 -1.3rem;
+    border-radius: 50%; border: .45rem solid var(--v-accent); background: var(--v-canvas);
+    box-shadow: 0 0 0 .35rem var(--v-canvas), 0 8px 24px rgb(242 169 59 / .35);
+    transform: rotate(calc(var(--v-p, 0) * 720deg)); }
+  .scale__mark::after { content: ""; position: absolute; inset: .3rem; border-radius: 50%; border: 1px dashed rgb(242 169 59 / .6); }
+  @media (max-width: 860px) {
+    .season { grid-template-columns: 1fr; grid-template-rows: 1fr auto auto auto; padding: clamp(4rem, 10vh, 6rem) var(--v-gutter) clamp(2rem, 6vh, 4rem); }
+    .season__thr { justify-self: start; text-align: left; align-self: end; padding-bottom: var(--v-4); display: flex; align-items: baseline; gap: var(--v-4); flex-wrap: wrap; }
+    .season__thr .big { font-size: clamp(3rem, 18vw, 5rem); }
+    .season__thr .v-label { margin-top: 0; max-width: 12rem; line-height: 1.35; }
+    .scale__months li { font-size: .75rem; letter-spacing: .02em; }
+    .scale__months li::after { content: attr(data-s); }
+    .season__after { justify-content: flex-start; padding-top: var(--v-4); }
+  }
+
+  /* ---- услуги: таблица по радиусу + строки, не карточки ------------------ */
+  .services { display: grid; grid-template-columns: 1.3fr .9fr; gap: var(--v-9); align-items: start; }
+  .services__seg { color: var(--v-ink); font-weight: 600; }
+  .tariff { display: grid; border-top: 1px solid var(--v-hair-strong); }
+  .tariff__row { display: grid; grid-template-columns: 6.5rem 1fr 1fr; gap: var(--v-4); align-items: baseline; padding: var(--v-4) 0; border-bottom: 1px solid var(--v-hair); }
+  .tariff__row--head { padding: var(--v-3) 0; }
+  .tariff__row--head span { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); font-family: var(--v-font-text); font-weight: 500; }
+  .tariff__row > span:first-child { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-base); letter-spacing: var(--v-track-normal); }
+  .tariff__row .price { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-base); color: var(--v-accent); white-space: nowrap; }
+  .tariff__row .none { color: var(--v-ink-soft); }
+  .services__incl { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 60ch; }
+  .services__incl b { color: var(--v-ink); font-weight: 600; }
+  .services__list li { display: grid; grid-template-columns: 1fr auto; gap: var(--v-2) var(--v-6); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); }
+  .services__list li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .services__list h3 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); letter-spacing: var(--v-track-normal); }
+  .services__list p { grid-column: 1; color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+  .services__list .price { grid-row: 1 / span 2; grid-column: 2; align-self: start; font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); color: var(--v-accent); white-space: nowrap; text-align: right; }
+  .services__list .price small { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: 0; }
+  .services__fig { position: relative; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2), var(--v-edge); aspect-ratio: 3 / 4; position: sticky; top: var(--v-8); }
+  .services__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .services__fig figcaption { position: absolute; left: var(--v-5); bottom: var(--v-5); right: var(--v-5); font-size: var(--v-t-sm); color: var(--v-ink); z-index: 1; }
+  .services__fig::after { content: ""; position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(to top, rgb(0 0 0 / .85), rgb(0 0 0 / .4) 50%, transparent); }
+  @media (max-width: 860px) {
+    .services { grid-template-columns: 1fr; gap: var(--v-7); }
+    .services__fig { aspect-ratio: 4 / 3; position: static; }
+    .tariff__row { grid-template-columns: 5.4rem 1fr 1fr; gap: var(--v-3); }
+    .tariff__row .price, .tariff__row > span:first-child { font-size: var(--v-t-sm); }
+    .services__list li { grid-template-columns: 1fr; gap: var(--v-1); }
+    .services__list .price { grid-row: auto; grid-column: 1; font-size: var(--v-t-base); text-align: left; }
+  }
+
+  /* ---- как проходит: сцена с шагами --------------------------------------- */
+  .steps__img img { width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; }
+  .steps__copy { max-width: 46rem; }
+  .steps__copy .v-display--lg { font-size: clamp(2rem, 1.3rem + 3vw, 4rem); }
+  .steps__copy .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .steps__copy .v-display { text-wrap: balance; }
+
+  /* ---- гарантии ------------------------------------------------------------- */
+  .promise { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-8); align-items: center; }
+  .promise__facts li { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-1); }
+  .promise__facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .promise__facts strong { font-weight: 600; }
+  .promise__facts span { color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .promise__fig { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 16 / 10; box-shadow: var(--v-e2); }
+  .promise__fig img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 860px) { .promise { grid-template-columns: 1fr; } }
+
+  /* ---- финал: запись без звонка ------------------------------------------------ */
+  .close { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding: clamp(6rem, 14vh, 9rem) var(--v-gutter) 0;
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(242 169 59 / .22), transparent 60%); }
+  .close__inner { align-self: center; display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--v-9); align-items: start; padding-bottom: var(--v-9); }
+  .close__inner .v-display { margin-bottom: var(--v-6); }
+  .book { display: grid; gap: var(--v-3); justify-items: start; }
+  .book__go { min-height: 3.5rem; padding: 0 2em; font-size: var(--v-t-base); }
+  .book__note { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 46ch; }
+  .book__alt { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3); margin-top: var(--v-6); }
+  .book__alt .v-label { margin-right: var(--v-1); }
+  .close__meta { display: grid; gap: var(--v-3); color: var(--v-ink-soft); padding-top: var(--v-2); }
+  .close__meta b { color: var(--v-ink); font-weight: 600; }
+  .close__tel { white-space: nowrap; font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.25rem, .8rem + 1.5vw, 2.1rem); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; justify-self: start; margin-bottom: var(--v-2); color: var(--v-ink); }
+  .book__consent { grid-column: 1 / -1; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .book__consent a, .foot a { color: inherit; text-decoration-color: var(--v-hair-strong); text-underline-offset: .2em; }
+  .book__consent a:hover, .foot a:hover { color: var(--v-ink); }
+  .foot { border-top: 1px solid var(--v-hair); padding: var(--v-7) 0 var(--v-6); font-size: var(--v-t-sm); color: var(--v-ink-soft); display: grid; gap: var(--v-6); }
+  .foot__grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr 1.1fr; gap: var(--v-6) var(--v-7); }
+  .foot__col { display: grid; gap: .35em; align-content: start; }
+  .foot__col h3 { font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); margin-bottom: .5em; }
+  .foot__col b, .foot__col .foot__name { color: var(--v-ink); font-weight: 600; }
+  .foot__col a { text-decoration: none; color: var(--v-ink); display: inline-flex; align-items: center; min-height: 32px; }
+  .foot__col a:hover { color: var(--v-accent); }
+  .foot__bar { display: flex; justify-content: space-between; gap: var(--v-4); flex-wrap: wrap; padding-top: var(--v-5); border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); }
+  .foot__bar a { display: inline-flex; align-items: center; min-height: 32px; }
+  @media (max-width: 960px) { .foot__grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .foot__grid { grid-template-columns: 1fr; } }
+
+  /* ---- политика конфиденциальности: окно поверх страницы ------------------------- */
+  .policy { width: min(46rem, calc(100vw - 2rem)); max-height: 86vh; padding: 0; border: 1px solid var(--v-hair-strong); border-radius: var(--v-radius);
+    background: var(--v-surface); color: var(--v-ink); box-shadow: var(--v-e2); overflow: hidden; }
+  .policy::backdrop { background: rgb(4 6 12 / .72); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .policy__in { max-height: 86vh; overflow: auto; padding: var(--v-6) var(--v-6) var(--v-7); display: grid; gap: var(--v-3); font-size: var(--v-t-sm); line-height: 1.6; color: var(--v-ink-soft); overscroll-behavior: contain; }
+  .policy h2 { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-lg); color: var(--v-ink); padding-right: 3rem; }
+  .policy h3 { font-family: var(--v-font-text); font-weight: 600; font-size: var(--v-t-base); color: var(--v-ink); margin-top: var(--v-3); }
+  .policy p, .policy li { max-width: 62ch; }
+  .policy ul { list-style: disc; padding-left: 1.2em; display: grid; gap: .25em; }
+  .policy__x { position: absolute; top: var(--v-3); right: var(--v-3); width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--v-hair-strong); background: var(--v-canvas); color: var(--v-ink); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+  .policy__x:hover { border-color: var(--v-accent); }
+  @media (max-width: 860px) {
+    .close { min-height: 0; padding-top: clamp(5rem, 12vh, 7rem); }
+    .close__inner { grid-template-columns: 1fr; gap: var(--v-7); padding-bottom: var(--v-8); }
+    .close__tel { font-size: var(--v-t-lg); }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Шинный двор</a>
+    <nav class="bar__right" aria-label="Быстрые ссылки">
+      <a class="bar__tel" href="tel:+78432054817">+7 (843) 205-48-17</a>
+      <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
+      <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Записаться</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- 1 · УЗНАВАНИЕ: hero из трёх планов -->
+    <section data-v-act="pin" data-v-span="2.6" data-v-drift="#0b0d11" aria-label="Шиномонтаж к своему времени">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.9">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="" width="1920" height="1067" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="v-layer hero__wheel" data-v-parallax="-0.35">
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/wheel-480.webp" width="480" height="645">
+            <img src="assets/wheel-900.webp" alt="" width="900" height="1210" decoding="async">
+          </picture>
+        </div>
+        <div class="hero__floor" aria-hidden="true"></div>
+        <div class="v-scrim v-scrim--lead" aria-hidden="true"></div>
+
+        <div class="hero__note" data-v-cue="0 0.6 0" data-v-rise="0">
+          <span class="v-label">Каждый день</span>
+          <span class="v-nums">08:00 – 22:00</span>
+          <span class="hero__addr">ул. Пролетарская, 14</span>
+        </div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.82 0">
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Шиномонтаж в Казани по записи – переобуем за 30 минут</h1>
+          <p class="v-lede">К своему времени, на ул. Пролетарская, 14: записываетесь заранее, цену знаете до приезда, балансировка уже в стоимости.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Записаться</a>
+            <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
+          </div>
+          <p class="hero__where">г. Казань, ул. Пролетарская, 14</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · НАПРЯЖЕНИЕ: сезонная шкала (фирменный ход) -->
+    <section data-v-act="pin" data-v-span="2.4" data-v-drift="#0e1219" id="sezon" aria-label="Когда переобуваться">
+      <div data-v-stage>
+        <div class="season">
+          <div class="season__copy">
+            <div data-v-cue="0 0.34 0 0.04">
+              <h2 class="v-display v-display--md">Осень. Ночью уже +7</h2>
+              <p class="v-body">Когда среднесуточная температура опускается до <b>+7 °C</b>, летняя резина дубеет и тормозной путь растёт. Это и есть сигнал переобуваться, а не первый снег и очередь на два часа.</p>
+            </div>
+            <div data-v-cue="0.32 0.68 0.04 0.04">
+              <h2 class="v-display v-display--md">Зима. Давление и проколы</h2>
+              <p class="v-body">На морозе давление в шинах падает: <b>проверяем и подкачиваем бесплатно</b>. Прокол чиним жгутом или заплаткой изнутри, по ситуации. В несезон без очереди.</p>
+            </div>
+            <div data-v-cue="0.66 1 0.04 0">
+              <h2 class="v-display v-display--md">Весна. Устойчивые +7</h2>
+              <p class="v-body">Возвращаем лето, когда плюс держится и днём, и ночью. Зимний комплект <b>оставляете у нас на хранение</b>: промаркирован, на стеллаже, до осени.</p>
+            </div>
+          </div>
+
+          <div class="season__thr" aria-hidden="true">
+            <span class="big">+7°</span>
+            <span class="v-label">порог переобувки, среднесуточная</span>
+          </div>
+
+          <div class="scale" aria-hidden="true">
+            <div class="scale__line"></div>
+            <div class="scale__fill"></div>
+            <ul class="scale__months">
+              <li data-m="Сен" data-s="С"></li><li data-m="Окт" data-s="О"></li><li data-m="Ноя" data-s="Н"></li><li data-m="Дек" data-s="Д"></li><li data-m="Янв" data-s="Я"></li><li data-m="Фев" data-s="Ф"></li><li data-m="Мар" data-s="М"></li><li data-m="Апр" data-s="А"></li><li data-m="Май" data-s="М"></li>
+            </ul>
+            <div class="scale__mark"></div>
+          </div>
+
+          <div class="season__after">
+            <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer" data-v-cue="0.7 1 0.05 0">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ВЫБОР: услуги и цены -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#0b0d11" id="ceny" aria-label="Услуги и цены">
+      <div class="v-wrap services">
+        <div class="v-stack" data-v-in data-v-stagger="60">
+          <h2 class="v-display v-display--lg">Цена известна до приезда</h2>
+          <p class="v-body v-soft">Считаем по радиусу: чем больше колесо, тем дольше монтаж и балансировка, поэтому цена растёт ступенями. <span class="services__seg">Легковые, кроссоверы и внедорожники до R22, малотоннажные до 3,5 т.</span> Доплаты только за то, что вы сами выбрали.</p>
+
+          <div class="tariff" role="table" aria-label="Переобувка комплекта из четырёх колёс по радиусу">
+            <div class="tariff__row tariff__row--head" role="row"><span role="columnheader">Радиус</span><span role="columnheader">Легковые</span><span role="columnheader">Кроссоверы и внедорожники</span></div>
+            <div class="tariff__row" role="row"><span role="cell">R13–R15</span><span class="price v-nums" role="cell">от 1 200 ₽</span><span class="none" role="cell">–</span></div>
+            <div class="tariff__row" role="row"><span role="cell">R16</span><span class="price v-nums" role="cell">от 1 500 ₽</span><span class="price v-nums" role="cell">от 1 600 ₽</span></div>
+            <div class="tariff__row" role="row"><span role="cell">R17–R18</span><span class="price v-nums" role="cell">от 1 900 ₽</span><span class="price v-nums" role="cell">от 2 100 ₽</span></div>
+            <div class="tariff__row" role="row"><span role="cell">R19–R20</span><span class="price v-nums" role="cell">от 2 400 ₽</span><span class="price v-nums" role="cell">от 2 700 ₽</span></div>
+            <div class="tariff__row" role="row"><span role="cell">R21–R22</span><span class="price v-nums" role="cell">от 2 900 ₽</span><span class="price v-nums" role="cell">от 3 300 ₽</span></div>
+          </div>
+          <p class="services__incl"><b>В цену комплекта входит:</b> снять четыре колеса, перебортировать, отбалансировать, поставить, грузики и момент затяжки по регламенту.</p>
+
+          <ul class="services__list">
+            <li><h3>Комплект на дисках, без перебортировки</h3><p>Второй комплект уже на дисках: снять, поставить, отбалансировать. Дешевле переобувки на любом радиусе.</p><span class="price v-nums">от 900 ₽</span></li>
+            <li><h3>Run-flat и низкий профиль</h3><p>Жёсткая боковина, монтаж дольше и аккуратнее к дискам. Поэтому отдельной строкой, а не сюрпризом в чеке.</p><span class="price v-nums">+500 ₽<small>к цене радиуса</small></span></li>
+            <li><h3>Коммерческий транспорт</h3><p>Газель и малотоннажные до 3,5 т, R15C–R16C, усиленная резина. Грузовые и спецтехнику не берём.</p><span class="price v-nums">от 3 500 ₽</span></li>
+            <li><h3>Ремонт прокола</h3><p>Жгут снаружи или заплатка изнутри. Скажем честно, если шину уже не спасти.</p><span class="price v-nums">от 600 ₽</span></li>
+            <li><h3>Датчики давления и вентили</h3><p>Проверка и обучение TPMS после переобувки, чтобы лампочка погасла. Замена вентиля или датчика.</p><span class="price v-nums">от 400 ₽</span></li>
+            <li><h3>Сезонное хранение</h3><p>Комплект промаркирован и лежит на стеллаже до следующего сезона.</p><span class="price v-nums">2 000 ₽<small>за сезон</small></span></li>
+          </ul>
+        </div>
+        <figure class="services__fig" data-v-reveal="up" data-v-reveal-at="0.12 0.45">
+          <img src="assets/stack.webp" alt="Комплект зимних шин на стеллаже хранения" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Ваш комплект на стеллаже, а не в багажнике до весны</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4 · ДОКАЗАТЕЛЬСТВО: как проходит -->
+    <section data-v-act="pin" data-v-span="2.8" data-v-drift="#0d1016" aria-label="Как проходит переобувка">
+      <div data-v-stage>
+        <div class="v-layer steps__img" data-v-parallax="-0.5">
+          <img src="assets/balance.webp" alt="" width="1920" height="1067" loading="lazy" decoding="async">
+        </div>
+        <div class="v-scrim v-scrim--lead" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead steps__copy" data-v-cue="0 0.28 0 0.05">
+          <span class="v-label">Шаг 1</span>
+          <h2 class="v-display v-display--lg">Записались заранее и выбрали время</h2>
+        </div>
+        <div class="v-copy v-copy--lead steps__copy" data-v-cue="0.27 0.53 0.05 0.05">
+          <span class="v-label">Шаг 2</span>
+          <h2 class="v-display v-display--lg">Приехали, машина сразу на подъёмник</h2>
+        </div>
+        <div class="v-copy v-copy--lead steps__copy" data-v-cue="0.52 0.78 0.05 0.05">
+          <span class="v-label">Шаг 3</span>
+          <h2 class="v-display v-display--lg">Каждое колесо через стенд балансировки</h2>
+        </div>
+        <div class="v-copy v-copy--lead steps__copy" data-v-cue="0.77 1 0.05 0">
+          <span class="v-label">Шаг 4</span>
+          <h2 class="v-display v-display--lg">Через 30 минут выдаём машину и чек</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ОБЕЩАНИЕ: гарантии -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#0d1016" aria-label="Что обещаем">
+      <div class="v-wrap promise">
+        <figure class="promise__fig" data-v-reveal="left" data-v-reveal-at="0.15 0.5">
+          <img src="assets/hands.webp" alt="Мастер бортирует шину на станке" width="1920" height="1067" loading="lazy" decoding="async">
+        </figure>
+        <div class="v-stack" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Что обещаем письменно</h2>
+          <ul class="promise__facts">
+            <li><strong>Балансировка и грузики в цене</strong><span>Не дописываем в чек то, без чего переобувка не переобувка.</span></li>
+            <li><strong>Испортили диск или болт, чиним за свой счёт</strong><span>Динамометрический ключ на каждой машине, момент затяжки по регламенту.</span></li>
+            <li><strong>Гарантия на ремонт прокола 12 месяцев</strong><span>Если заплатка не выдержала, переделаем бесплатно.</span></li>
+            <li><strong>Приехали к своему времени, ждёте не дольше 10 минут</strong><span>Иначе следующая переобувка со скидкой. Это записано в правилах записи.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ: запись без звонка -->
+    <section data-v-act="flow" data-v-drift="#0b0d11" id="zapis" aria-label="Записаться">
+      <div class="close" data-v-spotlight>
+        <div class="close__inner">
+          <div data-v-in data-v-stagger="80">
+            <h2 class="v-display v-display--lg">Запишитесь к своему времени</h2>
+            <div class="book">
+              <a class="v-btn book__go" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer" data-v-magnet="0.22">Записаться в Telegram</a>
+              <p class="book__note">Бот покажет свободные окна, подтвердит время и назовёт цену до приезда.</p>
+              <p class="book__consent">Записываясь через Telegram-бота, вы соглашаетесь на обработку персональных данных согласно <a href="#privacy" data-policy>политике конфиденциальности</a>.</p>
+            </div>
+            <div class="book__alt">
+              <span class="v-label">Или так</span>
+              <a class="v-btn v-btn--ghost" href="tel:+78432054817">Позвонить</a>
+            </div>
+          </div>
+          <div class="close__meta" data-v-in data-v-stagger="60">
+            <a class="close__tel" href="tel:+78432054817">+7 (843) 205-48-17</a>
+            <span><b>ул. Пролетарская, 14</b>, Казань · <a href="https://yandex.ru/maps/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C%20%D1%83%D0%BB.%20%D0%9F%D1%80%D0%BE%D0%BB%D0%B5%D1%82%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%2C%2014&amp;z=17" target="_blank" rel="noopener noreferrer">Маршрут на карте</a></span>
+            <span>Каждый день 08:00 – 22:00, без выходных</span>
+            <span>info@shinnydvor-kzn.ru</span>
+            <span>Отвечаем в мессенджере в рабочие часы</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <div class="foot__grid">
+            <div class="foot__col">
+              <h3>Компания</h3>
+              <span class="foot__name">ООО «Шинный двор»</span>
+              <span>ИНН 1655428310 · КПП 165501001</span>
+              <span>ОГРН 1191600481270</span>
+              <span>Юридический адрес: 420107, Республика Татарстан, г. Казань, ул. Пролетарская, д. 14, пом. 1</span>
+            </div>
+            <div class="foot__col">
+              <h3>Контакты</h3>
+              <a href="tel:+78432054817">+7 (843) 205-48-17</a>
+              <span>info@shinnydvor-kzn.ru</span>
+              <a href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Telegram @shinnydvor_kzn_bot</a>
+            </div>
+            <div class="foot__col">
+              <h3>Где и когда</h3>
+              <span><b>ул. Пролетарская, 14</b>, Казань</span>
+              <span>Ежедневно 08:00 – 22:00</span>
+              <span>Запись заранее, без выходных</span>
+            </div>
+            <div class="foot__col">
+              <h3>Услуги</h3>
+              <a href="#ceny">Шиномонтаж и балансировка</a>
+              <a href="#ceny">Ремонт проколов</a>
+              <a href="#ceny">Сезонное хранение шин</a>
+            </div>
+          </div>
+          <div class="foot__bar">
+            <span>© 2019–2026 ООО «Шинный двор». Все права защищены.</span>
+            <a href="#privacy" data-policy>Политика конфиденциальности</a>
+          </div>
+        </footer>
+
+        <dialog class="policy" id="privacy" aria-labelledby="privacy-title">
+          <button class="policy__x" type="button" data-policy-close aria-label="Закрыть">×</button>
+          <div class="policy__in">
+            <h2 id="privacy-title">Политика конфиденциальности</h2>
+            <p>Редакция от 15 октября 2026 года. Настоящий документ описывает, как ООО «Шинный двор» (ИНН 1655428310, ОГРН 1191600481270, адрес: 420107, г. Казань, ул. Пролетарская, д. 14, пом. 1; далее – Оператор) обрабатывает персональные данные посетителей сайта.</p>
+            <h3>1. Какие данные мы получаем</h3>
+            <ul>
+              <li>имя и идентификатор вашего профиля в Telegram, когда вы пишете нашему боту записи;</li>
+              <li>номер телефона, если вы сообщаете его боту или звоните нам;</li>
+              <li>желаемое время визита и сведения об автомобиле, которые вы указываете при записи.</li>
+            </ul>
+            <h3>2. Зачем мы их обрабатываем</h3>
+            <p>Сам сайт персональные данные не собирает: запись ведётся в Telegram-боте и по телефону. Данные нужны только для того, чтобы связаться с вами, подтвердить запись, назвать стоимость услуги и оказать услугу. Рекламные рассылки без вашего отдельного согласия не отправляем.</p>
+            <h3>3. Правовое основание</h3>
+            <p>Ваше согласие, которое вы даёте, начиная запись в Telegram-боте или обращаясь к нам другим способом (Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных»).</p>
+            <h3>4. Срок хранения и передача третьим лицам</h3>
+            <p>Данные хранятся не дольше, чем нужно для записи и оказания услуги, но не более 12 месяцев с даты обращения, после чего удаляются. Мы не передаём их третьим лицам, кроме случаев, прямо предусмотренных законом.</p>
+            <h3>5. Ваши права</h3>
+            <p>Вы можете запросить сведения о своих данных, их уточнение или удаление, а также отозвать согласие. Для этого напишите на info@shinnydvor-kzn.ru или позвоните по телефону +7 (843) 205-48-17. Обращение рассматриваем в срок, установленный законом.</p>
+            <h3>6. Файлы cookie</h3>
+            <p>Сайт не использует рекламные и аналитические cookie. Если это изменится, мы обновим этот документ и попросим вашего согласия.</p>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки, чтобы текст секций не просвечивал.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Фирменный ход: месяцы на шкале подсвечиваются по мере прогресса акта.
+  (function () {
+    var act = document.getElementById('sezon'), months = act.querySelectorAll('.scale__months li');
+    var last = -1, live = false;
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      var n = Math.round(p * (months.length - 1));
+      if (n !== last) { last = n; months.forEach(function (m, i) { m.classList.toggle('is-past', i <= n); }); }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    tick();
+  })();
+
+  // Политика конфиденциальности: окно по ссылке #privacy (из формы, футера и прямой ссылки).
+  (function () {
+    var dlg = document.getElementById('privacy');
+    function open() { if (typeof dlg.showModal === 'function') { if (!dlg.open) dlg.showModal(); } else { dlg.setAttribute('open', ''); } }
+    function close() { if (dlg.open) dlg.close(); if (location.hash === '#privacy') history.replaceState(null, '', location.pathname + location.search); }
+    document.querySelectorAll('[data-policy]').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); open(); });
+    });
+    dlg.querySelector('[data-policy-close]').addEventListener('click', close);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    dlg.addEventListener('close', function () { if (location.hash === '#privacy') history.replaceState(null, '', location.pathname + location.search); });
+    if (location.hash === '#privacy') open();
+  })();
+</script>
+</body>
+</html>
